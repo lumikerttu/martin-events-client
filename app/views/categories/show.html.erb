@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <h4>Name:</h4>
   <%= @category.name %>
 </p>
 
-<h3>Events in this category</h3>
+<p>
+  <h4>Event count:</h4>
+  <%= @category.events.count %>
+</p>
+
+<h4>Events in this category</h4>
 <ul>
 	<% @category.events.each do |event| %>
-		<li><%= event.name %></li>
+		<li><%= link_to(event.name, event_path(event)) %></li>
 	<% end %>
 </ul> 
 
