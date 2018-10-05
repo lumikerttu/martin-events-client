@@ -1,5 +1,7 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :users
+  mount Sidekiq::Web => '/sidekiq'
   resources :event_categories
   resources :categories
   root 'home#index'
