@@ -40,3 +40,5 @@ Event.create({
    location: "Aparaaditehas",
    category: Category.where(name: "Näitus").first
 })
+
+User.create({email: 'kerttu.karkis@gmail.com', password: ‘123123’}).confirm
