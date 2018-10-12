@@ -45,25 +45,17 @@ Open seed.db to edit last lines and put there your own mail-account and password
 
 edit mail@ and password 
 
-Create file secret.env to root folder:
-```
-touch secret.env
-```
 Starting rails server to see your result in a browser:
 ```
 rails s
 ```
 Go to ReCaptcha page https://www.google.com/recaptcha/admin#list to create your own API keys and choose the type of reCaptcha checkbox and register:
 
-copy public and private keys to secret.env file:
+copy public and private keys to root secret.env file:
 
 export RECAPTCHA_SITE_KEY  = '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
 export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 
-Close your runnig server to install the Gem:
-```
-bundle install
-```
 After you added API keys to secret.env
 Go to terminal rails s window and run command:
 ```
