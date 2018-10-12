@@ -60,19 +60,11 @@ copy public and private keys to secret.env file:
 export RECAPTCHA_SITE_KEY  = '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
 export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 
-Go to https://github.com/ambethia/recaptcha to add gem to Gemfile and close your running server:
-
-gem "recaptcha"
-
 Close your runnig server to install the Gem:
 ```
 bundle install
 ```
-Add API keys to secret.env:
-
-export RECAPTCHA_SITE_KEY='6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
-export RECAPTCHA_SECRET_KEY='6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
-
+After you added API keys to secret.env
 Go to terminal rails s window and run command:
 ```
 source secret.env
@@ -81,20 +73,6 @@ Run server:
 ```
 rails s
 ```
-add text to gemfile recaptcha:
-
-gem "recaptcha", require: 'recaptcha/rails'
-
-Add recaptcha tags to your form app/views/contact/index.html.erb:
-```
-<div class="form-group">
-    <label for="content">Content</label>
-    <textarea name="content" class="form-control" id="content"></textarea>
-</div>
-<%= recaptcha_tags %>
-```
-
-
 
 ## Built With
 
