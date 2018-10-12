@@ -60,7 +60,7 @@ Go to SendGrid page https://www.sendgrid.com to create your own API key:
 
 copy key to root secret.env file:
 ```
-xport SENDGRID_API_KEY='SG.htDq4zCcQrqLejOxzOvWcA.yqdTKDroBwyZhicGVJ1wGwJo-RXXXXXXXXXYYYYYY'
+xport SENDGRID_API_KEY='SG.htDq4zCcQrqLejOxzOvWcA.yqdTKDroBwyZhicGVJ1wGwJo-RXXXXXXXXXYYYYYYs'
 ```
 After you added API keys to secret.env
 Go to terminal rails s window and run command:
