@@ -37,7 +37,7 @@ Starting rails server to see your result in a browser:
 ```
 rails s
 ```
-Create database:
+Create database from seed:
 ```
 rake db:seed
 ```
@@ -53,7 +53,7 @@ Starting rails server to see your result in a browser:
 ```
 rails s
 ```
-Go to ReCaptcha Github page https://www.google.com/recaptcha/admin#list to create your own API keys and choose the tppe of reCaptcha checkbox and register:
+Go to ReCaptcha Github page https://www.google.com/recaptcha/admin#list to create your own API keys and choose the type of reCaptcha checkbox and register:
 ```
 copy public and private keys to secret.env
 
@@ -62,7 +62,7 @@ export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 ```
 Go to https://github.com/ambethia/recaptcha to add gem to Gemfile:
 ```
-gem "recaptcha"
+gem "recaptcha", require: 'recaptcha/rails'
 ```
 Close your runnig server to install the Gem:
 ```
@@ -79,8 +79,18 @@ source secret.env
 ```
 Run server:
 ```
-rails ss
+rails s
 ```
+Add recaptcha tags to app/views/contact/form:
+```
+r<div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" class="form-control" id="content"></textarea>
+</div>
+<%= recaptcha_tags %>
+```
+
+
 
 ## Built With
 
