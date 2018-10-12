@@ -42,9 +42,9 @@ Create database from seed:
 rake db:seed
 ```
 Open seed.db to rewrite last lines and put there your own mail-account and password and Login to your application:
-```
+
 edit mail@ and password 
-```
+
 Create file secret.env to vendor folder:
 ```
 touch secret.env
@@ -54,25 +54,25 @@ Starting rails server to see your result in a browser:
 rails s
 ```
 Go to ReCaptcha Github page https://www.google.com/recaptcha/admin#list to create your own API keys and choose the type of reCaptcha checkbox and register:
-```
+
 copy public and private keys to secret.env
 
 export RECAPTCHA_SITE_KEY  = '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
 export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
-```
+
 Go to https://github.com/ambethia/recaptcha to add gem to Gemfile and close your running server:
-```
+
 gem "recaptcha", require: 'recaptcha/rails'
-```
+
 Close your runnig server to install the Gem:
 ```
 bundle install
 ```
 Add API keys to secret.env:
-```
+
 export RECAPTCHA_SITE_KEY='6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
 export RECAPTCHA_SECRET_KEY='6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
-```
+
 Go to terminal rails s window and run command:
 ```
 source secret.env
@@ -82,12 +82,14 @@ Run server:
 rails s
 ```
 add lines to gemfile recaptcha:
-```
+
 gem "recaptcha", require: 'recaptcha/rails'
-```
+
+
 Add recaptcha tags to your form app/views/contact/index.html.erb:
 ```
-r<div class="form-group">
+```
+<div class="form-group">
     <label for="content">Content</label>
     <textarea name="content" class="form-control" id="content"></textarea>
 </div>
