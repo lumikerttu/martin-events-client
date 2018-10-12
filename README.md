@@ -62,7 +62,7 @@ export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 
 Go to https://github.com/ambethia/recaptcha to add gem to Gemfile and close your running server:
 
-gem "recaptcha", require: 'recaptcha/rails'
+gem "recaptcha"
 
 Close your runnig server to install the Gem:
 ```
@@ -87,14 +87,13 @@ gem "recaptcha", require: 'recaptcha/rails'
 
 
 Add recaptcha tags to your form app/views/contact/index.html.erb:
-```
-```
+
 <div class="form-group">
     <label for="content">Content</label>
     <textarea name="content" class="form-control" id="content"></textarea>
 </div>
 <%= recaptcha_tags %>
-```
+
 
 
 
