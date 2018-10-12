@@ -52,10 +52,10 @@ rails s
 Go to ReCaptcha page https://www.google.com/recaptcha/admin#list to create your own API keys and choose the type of reCaptcha checkbox and register:
 
 copy public and private keys to root secret.env file:
-
+```
 export RECAPTCHA_SITE_KEY  = '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
 export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
-
+```
 After you added API keys to secret.env
 Go to terminal rails s window and run command:
 ```
