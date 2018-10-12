@@ -56,6 +56,12 @@ copy public and private keys to root secret.env file:
 export RECAPTCHA_SITE_KEY  = '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
 export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 ```
+Go to SendGrid page https://www.sendgrid.com to create your own API key:
+
+copy key to root secret.env file:
+```
+xport SENDGRID_API_KEY='SG.htDq4zCcQrqLejOxzOvWcA.yqdTKDroBwyZhicGVJ1wGwJo-RXXXXXXXXXYYYYYY'
+```
 After you added API keys to secret.env
 Go to terminal rails s window and run command:
 ```
