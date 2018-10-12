@@ -37,6 +37,17 @@ Starting rails server to see your result in a browser:
 ```
 rails s
 ```
+Task1:
+rails s
+```
+rask 2:
+rails s
+```
+Task3:
+rails s
+```
+
+
 
 ## Built With
 
