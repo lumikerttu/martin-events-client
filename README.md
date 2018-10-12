@@ -37,17 +37,49 @@ Starting rails server to see your result in a browser:
 ```
 rails s
 ```
-task1:
+Create database:
+```
+rake db:seed
+```
+Open seed.db to rewrite last lines and put there your own mail-account and password and Login to your application:
+```
+edit mail@ and password 
+```
+Create file secret.env to vendor folder:
+```
+touch secret.env
+```
+Starting rails server to see your result in a browser:
 ```
 rails s
 ```
-task2:
+Go to ReCaptcha Github page https://www.google.com/recaptcha/admin#list to create your own API keys and choose the tppe of reCaptcha checkbox and register:
 ```
-rails s
+copy public and private keys to secret.env
+
+export RECAPTCHA_SITE_KEY  = '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
+export RECAPTCHA_SECRET_KEY = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 ```
-task3:
+Go to https://github.com/ambethia/recaptcha to add gem to Gemfile:
 ```
-rails s
+gem "recaptcha"
+```
+Close your runnig server to install the Gem:
+```
+bundle install
+```
+Add API keys to secret.env:
+```
+export RECAPTCHA_SITE_KEY='6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
+export RECAPTCHA_SECRET_KEY='6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
+```
+Go to terminal rails s window and run command:
+```
+source secret.env
+```
+Run server:
+```
+rails ss
 ```
 
 ## Built With
