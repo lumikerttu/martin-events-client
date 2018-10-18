@@ -19,7 +19,7 @@ A step by step series of examples that tell you how to get a development up and 
 
 Cloning git repo:
 ```
-git clone https://github.com/sinivaal/martin-events-client
+git clone https://github.com/lumikerttu/martin-events-client
 ```
 Opening the repo root folder:
 ```
